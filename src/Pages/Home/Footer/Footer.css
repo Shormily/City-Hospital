@@ -1,0 +1,28 @@
+.bg-color{
+    background-color: rgb(20, 65, 155);
+}
+
+.footer-weight{
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+}
+.icn{
+    display: inline-block;
+    height:40px;
+    width: 40px;
+    background-color: #ffffff;
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height:40px;
+    border-radius: 50%;
+    color: #141313;
+    transition:all 0.5s ease;
+}
+.icn:hover{
+    color: #f0f2fa;
+    background: linear-gradient(rgba(5, 5, 4, 0.989),rgba(137, 135, 135, 0.371));
+}
+.pragraph-weight{
+    font-weight: 600;
+    font-family: 'M PLUS 1', sans-serif;
+}

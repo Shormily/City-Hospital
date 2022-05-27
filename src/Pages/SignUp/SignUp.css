@@ -1,0 +1,17 @@
+.log-in-button{
+    background-color: rgb(20, 65, 155);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    color: #fff;
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+ }
+ .Sign-in-button{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    color:black;
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+ }
