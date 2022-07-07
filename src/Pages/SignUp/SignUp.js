@@ -1,18 +1,35 @@
 import React from 'react';
 import medical from "../Home/imges/medical.jpg";
-import useFirebase from "../Hook/useFirebase";
+// import useFirebase from "../Hooks/useFirebase";
 import {  useState } from "react"
 import { createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail} from 'firebase/auth';
 import { Form } from 'react-bootstrap';
 import "./SignUp.css";
+import useAuth from '../Hooks/useAuth';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 const SignUp = () => {
-    const {signInUsingGoogle,createNewUserByEmail} = useFirebase();
+    const {signInUsingGoogle,createNewUserByEmail} = useAuth();
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
     const [error,setError] = useState('')
     const [isLogin,setIsLogin] = useState(false)
-   
+
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const hanldeGoogleLogin = () => {
+      signInUsingGoogle(location,navigate)
+        
+       
+    };
+  
+
+
+    
   const auth = getAuth()
   
     const handleRegister = e =>{
@@ -36,6 +53,7 @@ const SignUp = () => {
     const processLogin = (email,password) =>{
       signInWithEmailAndPassword(auth,email,password)
       .then((result) => {
+       
        const user = result.user;
        console.log(user);
        setError('Successfully Log In !!Now Go To Another Page');
@@ -129,7 +147,7 @@ const SignUp = () => {
                
                
                 <hr className='w-75'/>
-                <button className='container w-75  mb-2 Sign-in-button bg-warning' onClick={signInUsingGoogle}>Google Sign In</button>
+                <button className='container w-75  mb-2 Sign-in-button bg-warning' onClick={hanldeGoogleLogin}>Google Sign In</button>
                 </div>
                
               

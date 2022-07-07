@@ -1,13 +1,14 @@
 import React from 'react';
 import { Navbar,Container,Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import useFirebase from '../../Hook/useFirebase';
+// import useFirebase from '../../Hook/useFirebase';
 import clinic from "../imges/clinic.png";
 import { IoLogInSharp } from "react-icons/io5";
 import "./Navbars.css";
+import useAuth from '../../Hooks/useAuth';
 
 const Navbars = () => {
-  const {user,logout} = useFirebase();
+  const {user,logout} = useAuth();
     return (
         <>
         
@@ -53,7 +54,7 @@ const Navbars = () => {
                  to="/signup  "
                  as={NavLink}
                >
-               LogOut <IoLogInSharp  size="25"/><span>
+               SignOut <IoLogInSharp  size="25"/><span>
                 {user?.photoURL ? (
                   <img className="user-img" src={user.photoURL} alt="" />
                 ) : (

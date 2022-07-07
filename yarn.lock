@@ -9005,6 +9005,11 @@
     "picocolors" "^1.0.0"
     "stable" "^0.1.8"
 
+"sweetalert2@^11.4.20":
+  "integrity" "sha512-3LiBFa5yRmTcqM0vGcFmo0EnhmaMSJfzhFpvZoXK6BOY94HIcIUbwhhW+NY5oXOpz5CT21qFAu0fKCUkOc/Pew=="
+  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.4.20.tgz"
+  "version" "11.4.20"
+
 "swiper@^8.1.5":
   "integrity" "sha512-wJv4Ro5R4FunzN4WADpag/i3p0BkDOATwCDbBKnGooENgHKFWxqDAe25kK6PLI6+pwM0hJQrpsRKGJXXkIeIHg=="
   "resolved" "https://registry.npmjs.org/swiper/-/swiper-8.1.5.tgz"

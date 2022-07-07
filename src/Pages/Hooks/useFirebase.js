@@ -9,6 +9,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import Swal from "sweetalert2";
 
 inisilizeAuthentication();
 const useFirebase = () => {
@@ -29,24 +30,62 @@ const useFirebase = () => {
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
-  const signInUsingGoogle = () => {
+
+
+
+  const signInUsingGoogle = (location,navigate) => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
-        console.log(result.user);
+
+        const distination = location?.state?.from || '/about';
+        console.log( distination);
+        navigate(distination);
+
+        Swal.fire(
+          'Successfully Sign In!',
+          'welcome to our Medical Clinic',
+          'success'
+        )
         setUser(result.user);
       })
       .catch((error) => {
+        Swal.fire(
+          'The Internet?',
+          'That thing is still around?',
+          'error'
+        )
+        
         setError(error.message);
       });
   };
-  const loginWithEmail = (email, password) => {
+
+
+
+
+
+
+  const loginWithEmail = (email, password,location,navigate) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        console.log(result.user);
+        const distination = location?.state?.from || '/about';
+        console.log( distination);
+        navigate(distination);
+
+        Swal.fire(
+          'Successfully Sign In!',
+          'welcome to our Medical Clinic',
+          'success'
+        )
         setUser(result.user);
       })
       .catch((error) => {
+        Swal.fire(
+          'The Internet?',
+          'That thing is still around?',
+          'error'
+        )
+        
         setError(error.message);
       });
   };
