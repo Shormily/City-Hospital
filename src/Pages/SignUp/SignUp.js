@@ -7,6 +7,7 @@ import { Form } from 'react-bootstrap';
 import "./SignUp.css";
 import useAuth from '../Hooks/useAuth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import 'animate.css';
 
 
 const SignUp = () => {
@@ -105,12 +106,12 @@ const SignUp = () => {
         <>
       <div className='container'>
         <div className='row d-flex '>
-          <h1 className=' pragraph-weight text-primary mt-5 '>Please <span className='text-primary'>{isLogin ? "Login" :" Sign In "}</span>  </h1>
+          <h1 className=' pragraph-weight text-primary mt-5 animate__animated animate__fadeInLeft  '>Please <span className='text-primary'>{isLogin ? "Login" :" Sign In "}</span>  </h1>
           </div>
           </div>
           <div className='container'>
               <div className='row'>
-              <div className=' contact col-md-6 col-12 col-lg-6 container  '>
+              <div className=' contact col-md-6 col-12 col-lg-6 container  animate__animated animate__fadeInLeft '>
                 <div className=' input-part mt-2 mb-5 '>
                 <input
                 className=" mb-3 p-3  w-75 shadow"
@@ -153,7 +154,7 @@ const SignUp = () => {
               
             </div>
             
-            <div className='col-lg-6 col-md-12 c0l-12 mt-5 '>
+            <div className='col-lg-6 col-md-12 c0l-12 mt-5 animate__animated animate__fadeInRight '>
                   <img className="w-100 p-2 shadow " src={medical} alt="" />
                   
                   </div>

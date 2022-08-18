@@ -1,0 +1,19 @@
+.btnservice{
+    display: flex;
+    gap: 15px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.btnsdesigns{
+    border: none;
+  
+    padding-top: 4px;
+    padding-bottom: 5px;
+}
+.btnsdesigns2{
+    /* border: none; */
+    background-color: rgb(20, 70, 162);
+}
+

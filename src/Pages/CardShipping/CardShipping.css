@@ -1,0 +1,139 @@
+
+
+
+input[type=text] {
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(105, 3, 3);
+  /* width: 500px; */
+  font-family: 'M PLUS 1', sans-serif;
+  font-weight: 900;
+  }
+  input:focus {
+    border-color: green
+  }
+  textarea{
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(145, 14, 14);
+  width: 500px;
+  font-family: 'M PLUS 1', sans-serif;
+  font-weight: 900;
+  }
+
+  .texts{
+    color: rgb(20, 70, 162);
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+  }
+
+  /* 
+  const { id } = useParams();
+  const { user } = useAuth();
+  const [service, setService] = useState({});
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const { name, img, description } = service;
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/services/${id}`)
+      .then((res) => res.json())
+      .then((data) => setService(data));
+  }, [id]);
+
+  console.log(service);
+  const onSubmit = (data) => {
+    fetch("http://localhost:5000/orders", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          alert("Order successfully");
+          reset();
+        }
+      });
+  */
+
+  /* 
+   <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-6 col-12 col-12 mb-3 mt-5">
+            <div className="card-container rounded-2">
+              <div className="swiper">
+                <div className="image-container  ">
+                  <img src={img} alt="" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-center pragraph-weight mt-3 text-primary">
+                {name}
+              </h3>
+              <p className="text-center pragraph-weight p-3">{description}</p>
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-6 col-12">
+            <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
+              <input
+                {...register("name", { required: true })}
+                placeholder="Name"
+                value={user?.displayName}
+                type="text"
+                className="mb-3 p-3  w-100 shadow pragraph-weight"
+              />
+              <br />
+              <input
+                {...register("userEmail", { required: true })}
+                placeholder="userEmail"
+                value={user?.email}
+                type="email"
+                className="mb-3 p-3  w-100 shadow pragraph-weight"
+              />
+              <br />
+              <input
+                {...register("serviceName", { required: true })}
+                placeholder="serviceName"
+                value={name}
+                type="text"
+                className="mb-3 p-3  w-100 shadow pragraph-weight"
+              />
+              <br />
+              <input
+                {...register("price")}
+                type="text"
+                placeholder="Price"
+                className="mb-3 p-3  w-100 shadow pragraph-weight"
+              />
+              <br />
+              <input
+                {...register("address")}
+                type="text"
+                placeholder="Address"
+                className="mb-3 p-3  w-100 shadow pragraph-weight"
+              />
+              <br />
+              <input
+                {...register("city")}
+                type="text"
+                placeholder="City"
+                className="mb-3 p-3  w-100 shadow pragraph-weight"
+              />
+              <br />
+              <input
+                type="submit"
+                className="mb-3 p-3  w-100 shadow bg-danger text-light pragraph-weight"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+  */

@@ -25,7 +25,7 @@ import "./Service.css";
 const Service = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-      fetch("../service.json")
+      fetch("http://localhost:5000/services")
         .then((res) => res.json())
         .then((data) => setServices(data));
     }, []);
@@ -282,7 +282,9 @@ const Service = () => {
            <div className="row ">
            <h1 className='text-center pragraph-weight mt-3 text-primary' >Our Hospital Services</h1>
                {services.map((service) => (
-           <Card key={services.id} service={service}></Card>
+           <Card key={services.id} service={service}
+           setServices={setServices}
+           ></Card>
          ))}
              
           

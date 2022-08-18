@@ -50,11 +50,7 @@ const useFirebase = () => {
         setUser(result.user);
       })
       .catch((error) => {
-        Swal.fire(
-          'The Internet?',
-          'That thing is still around?',
-          'error'
-        )
+      
         
         setError(error.message);
       });
@@ -80,11 +76,7 @@ const useFirebase = () => {
         setUser(result.user);
       })
       .catch((error) => {
-        Swal.fire(
-          'The Internet?',
-          'That thing is still around?',
-          'error'
-        )
+       
         
         setError(error.message);
       });
